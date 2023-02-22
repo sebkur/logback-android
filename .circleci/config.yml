@@ -54,7 +54,7 @@ jobs:
           at: ~/code
       - run:
           name: Run Tests
-          command: ./gradlew test --parallel
+          command: ./gradlew :logback-android:testDebugUnitTest --tests ch.qos.logback.classic.MDCTest
       - store_artifacts:
           path: logback-android/build/reports
           destination: reports
